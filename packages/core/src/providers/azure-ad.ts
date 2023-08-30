@@ -20,8 +20,8 @@ export interface AzureADProfile extends Record<string, any> {
 /**
  * Add AzureAd login to your page.
  *
- * ### Setup
- *
+ * ### Setup (for non-specific Active Directory tenants)
+ * The following setup lacks a `tenantId` in its config, and therefore will permit uses from any Active Directory tenant to authenticate. However, this setup is currently broken and [logged as an issue](https://github.com/nextauthjs/next-auth/issues/8374).
  * #### Callback URL
  * ```
  * https://example.com/api/auth/callback/azure-ad
